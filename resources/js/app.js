@@ -4,22 +4,18 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-import App from './App.vue'
-import { createApp } from 'vue'
-import router from './router/index'
-import components from './components/UI'
-import store from './store'
+import App from "./App.vue";
+import { createApp } from "vue";
+import router from "./router/index";
+import components from "./components/UI/";
+import store from "./store";
 
-const app = createApp(App)
+const app = createApp(App);
 
-components.forEach(c => {
-    app.component(c.name, c)
-})
+components.forEach((c) => {
+  app.component(c.name, c);
+});
 
-app
-    .use(router)
-    .use(store)
-    .mount('#app')
-
+app.use(router).use(store).mount("#app");

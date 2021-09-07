@@ -23,6 +23,9 @@ class User extends Authenticatable implements JWTSubject
         'username',
         'email',
         'password',
+        'avatar',
+        'relation_status_id',
+        'gender_id',
     ];
 
     /**
@@ -61,4 +64,24 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims() {
         return [];
     }    
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function relation_status()
+    {
+        return $this->belongsTo(RelationStatus::class);
+    }
+
+    public function gender()
+    {
+        return $this->belongsTo(Gender::class);
+    }
+
+    public function chats()
+    {
+        return $this->belongsToMany(Chat::class, 'user_chats');
+    }
 }

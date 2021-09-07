@@ -1,7 +1,12 @@
 <template>
   <div v-if="visible" class="preloader-back">
     <div class="preloader-circle">
-      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,7 +22,7 @@ export default {
 
     return {
       visible,
-    }
+    };
   },
 };
 </script>
@@ -96,5 +101,4 @@ export default {
     transform: translate(24px, 0);
   }
 }
-
 </style>

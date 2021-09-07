@@ -10,6 +10,7 @@
       <button @click="profile">My profile</button>
       <button @click="refresh">Test Refresh</button>
       <button @click="logout">Test Logout</button>
+      <button @click="auth_id">Auth ID</button>
     </div>
   </div>
 </template>
@@ -21,7 +22,8 @@ const store = useStore();
 const isAuthorized = computed(() => store.state.user.isAuthorized);
 const profile = () => store.dispatch("user/profile");
 const refresh = () => store.dispatch("user/refreshToken");
-const logout = () => store.dispatch("user/logoutUser");
+const logout = () => store.dispatch("user/logoutUser"); 
+const auth_id = () => store.dispatch("user/auth_id");
 
 onMounted(() => {
   // console.log(store.state.user.);

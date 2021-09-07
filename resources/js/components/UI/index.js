@@ -1,9 +1,5 @@
-import Preloader from './Preloader'
-import CustomInput from './CustomInput'
-import CustomButton from './CustomButton'
+import Preloader from "./Preloader.vue";
+import CustomInput from "./CustomInput.vue";
+import CustomButton from "./CustomButton.vue";
 
-export default [
-    Preloader,
-    CustomInput,
-    CustomButton,
-]
+export default [Preloader, CustomInput, CustomButton];
